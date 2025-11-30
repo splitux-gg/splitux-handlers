@@ -12,7 +12,7 @@ Handlers are configuration files that tell Splitux how to run a specific game wi
 handlers/
 ├── game-id/
 │   ├── handler.yaml    # Handler configuration (required)
-│   ├── icon.png        # Game icon, square (required)
+│   ├── icon.jpg        # Game icon from Steam cache (required)
 │   ├── header.jpg      # Banner image for detail view (required)
 │   └── background.jpg  # Background image (optional)
 ```
@@ -23,8 +23,8 @@ handlers/
 2. Create a new directory under `handlers/` with your game's ID (lowercase, hyphens for spaces)
 3. Add the required files:
    - `handler.yaml` - Your handler configuration
-   - `icon.png` - Square game icon (recommended: 256x256)
-   - `header.jpg` - Banner image (recommended: 460x215 or similar Steam header ratio)
+   - `icon.jpg` - Game icon (can be copied from Steam's librarycache)
+   - `header.jpg` - Banner image (library_header.jpg from Steam cache)
 4. Update `index.json` with your handler's metadata
 5. Submit a pull request
 

@@ -1,0 +1,45 @@
+# PEAK - Splitux Handler
+# Skiing/snowboarding game with Photon-based multiplayer
+
+name: PEAK
+spec_ver: 3
+
+# Steam app ID (auto-detects install location)
+steam_appid: 3527290
+
+# Executable path relative to game root
+exec: PEAK.exe
+
+# Use Photon backend with LocalMultiplayer mod
+backend: photon
+
+# Photon settings for LocalMultiplayer BepInEx mod
+photon_settings:
+  config_path: "AppData/LocalLow/LandCrab/PEAK/LocalMultiplayer/global.cfg"
+  shared_files:
+    - "AppData/LocalLow/LandCrab/PEAK/LocalMultiplayer/GlobalSave"
+
+# Required mod - must be manually installed
+required_mods:
+  - name: "LocalMultiplayer"
+    description: "Steam account spoofing for local co-op"
+    url: "https://thunderstore.io/c/peak/p/quackandcheese/LocalMultiplayer/"
+    dest_path: "overlay/BepInEx/plugins"
+    file_pattern: "*.dll"
+
+# Use Proton Experimental
+proton_path: "Proton - Experimental"
+
+# Delay between instance launches
+pause_between_starts: 5.0
+
+# Handler info
+author: splitux
+version: "1.0"
+info: |
+  PEAK co-op splitscreen support using Photon backend.
+
+  REQUIRES MANUAL MOD INSTALLATION:
+  1. Download LocalMultiplayer from Thunderstore
+  2. Install BepInEx and the LocalMultiplayer plugin
+  3. The mod handles Steam account spoofing for local play

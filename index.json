@@ -1,4 +1,32 @@
 {
   "version": 1,
-  "handlers": []
+  "handlers": [
+    {
+      "id": "astroneer",
+      "name": "ASTRONEER",
+      "author": "splitux",
+      "steam_appid": 361420,
+      "backend": "goldberg",
+      "description": "Space exploration sandbox with co-op support",
+      "updated": "2025-11-30"
+    },
+    {
+      "id": "peak",
+      "name": "PEAK",
+      "author": "splitux",
+      "steam_appid": 3527290,
+      "backend": "photon",
+      "description": "Skiing/snowboarding game - requires LocalMultiplayer mod",
+      "updated": "2025-11-30"
+    },
+    {
+      "id": "the-riftbreaker",
+      "name": "The Riftbreaker",
+      "author": "splitux",
+      "steam_appid": 780310,
+      "backend": "goldberg",
+      "description": "Base-building action RPG with native LAN support",
+      "updated": "2025-11-30"
+    }
+  ]
 }

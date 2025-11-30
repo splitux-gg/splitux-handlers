@@ -1,0 +1,37 @@
+# The Riftbreaker - Splitux Handler
+# Uses disable_steam workaround to bypass gbe_fork Steam Networking Sockets bug
+
+name: The Riftbreaker
+spec_ver: 3
+
+# Steam app ID (auto-detects install location)
+steam_appid: 780310
+
+# Executable path relative to game root
+exec: bin/riftbreaker_win_release.exe
+
+# Use Goldberg for LAN multiplayer emulation
+backend: goldberg
+
+# Goldberg settings
+goldberg_settings:
+  force_lobby_type.txt: "2"
+  invite_all.txt: ""
+
+# Game config patches - disable Steam networking to use native LAN
+game_patches:
+  conf/initial_config_win.cfg:
+    disable_steam: "1"
+
+# Delay between instance launches (game needs time to initialize)
+pause_between_starts: 5.0
+
+# Handler info
+author: splitux
+version: "1.0"
+info: |
+  The Riftbreaker co-op splitscreen support.
+  Uses disable_steam=1 workaround to bypass Steam Networking Sockets
+  and use native LAN multiplayer instead.
+
+  Tested working: lobby discovery and joining works correctly.
