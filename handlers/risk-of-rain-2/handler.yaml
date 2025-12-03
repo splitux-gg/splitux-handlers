@@ -1,0 +1,19 @@
+# Risk of Rain 2 - Splitux Handler
+# Roguelike third-person shooter with Goldberg Steam Emulator
+
+name: Risk of Rain 2
+exec: Risk of Rain 2.exe
+author: splitux
+version: "1.1"
+info: |
+  Risk of Rain 2 co-op splitscreen support.
+  Uses Goldberg Steam Emulator for LAN multiplayer.
+spec_ver: 3
+steam_appid: 632360
+proton_path: "Proton - Experimental"
+backend: goldberg
+pause_between_starts: 5.0
+
+goldberg_settings:
+  force_lobby_type.txt: "2"
+  invite_all.txt: ""

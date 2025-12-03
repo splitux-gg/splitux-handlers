@@ -1,34 +1,22 @@
 # ASTRONEER - Splitux Handler
-# Space exploration sandbox with co-op support via Goldberg
+# Testing with networking enabled for Steam Networking Sockets support
 
 name: ASTRONEER
-spec_ver: 3
-
-# Steam app ID (auto-detects install location)
-steam_appid: 361420
-
-# Executable path relative to game root
 exec: Astro.exe
-
-# Use Goldberg for LAN multiplayer emulation
+author: splitux
+version: "1.2"
+info: |
+  ASTRONEER co-op splitscreen support.
+  Uses Goldberg Steam Emulator with lobby discovery.
+spec_ver: 3
+steam_appid: 361420
+proton_path: "Proton - Experimental"
 backend: goldberg
+pause_between_starts: 8.0
 
-# Goldberg settings
+# Keep networking enabled - ASTRONEER may need Steam Networking Sockets
+goldberg_disable_networking: false
+
 goldberg_settings:
   force_lobby_type.txt: "2"
   invite_all.txt: ""
-
-# Use Proton Experimental for best compatibility
-proton_path: "Proton - Experimental"
-
-# Delay between instance launches
-pause_between_starts: 8.0
-
-# Handler info
-author: splitux
-version: "1.0"
-info: |
-  ASTRONEER co-op splitscreen support.
-  Uses Goldberg Steam Emulator for LAN multiplayer.
-
-  Requires Proton Experimental for proper functionality.

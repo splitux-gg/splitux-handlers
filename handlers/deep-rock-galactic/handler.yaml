@@ -1,0 +1,19 @@
+# Deep Rock Galactic - Splitux Handler
+# Co-op mining FPS with Goldberg Steam Emulator
+
+name: Deep Rock Galactic
+exec: FSD.exe
+author: splitux
+version: "1.1"
+info: |
+  Deep Rock Galactic co-op splitscreen support.
+  Uses Goldberg Steam Emulator for LAN multiplayer.
+spec_ver: 3
+steam_appid: 548430
+proton_path: "Proton - Experimental"
+backend: goldberg
+pause_between_starts: 8.0
+
+goldberg_settings:
+  force_lobby_type.txt: "2"
+  invite_all.txt: ""
