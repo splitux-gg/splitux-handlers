@@ -11,12 +11,9 @@ info: |
 spec_ver: 3
 steam_appid: 361420
 proton_path: "Proton - Experimental"
-backend: goldberg
 pause_between_starts: 8.0
 
 # Keep networking enabled - ASTRONEER may need Steam Networking Sockets
-goldberg_disable_networking: false
-
-goldberg_settings:
-  force_lobby_type.txt: "2"
-  invite_all.txt: ""
+goldberg.disable_networking: false
+goldberg.settings.force_lobby_type.txt: "2"
+goldberg.settings.invite_all.txt: ""

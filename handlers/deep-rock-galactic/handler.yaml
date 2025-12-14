@@ -11,9 +11,7 @@ info: |
 spec_ver: 3
 steam_appid: 548430
 proton_path: "Proton - Experimental"
-backend: goldberg
 pause_between_starts: 8.0
 
-goldberg_settings:
-  force_lobby_type.txt: "2"
-  invite_all.txt: ""
+goldberg.settings.force_lobby_type.txt: "2"
+goldberg.settings.invite_all.txt: ""

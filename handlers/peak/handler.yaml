@@ -16,13 +16,11 @@ info: |
 spec_ver: 3
 steam_appid: 3527290
 proton_path: "Proton - Experimental"
-backend: photon
 pause_between_starts: 5.0
 
-photon_settings:
-  config_path: "AppData/LocalLow/LandCrab/PEAK/LocalMultiplayer/global.cfg"
-  shared_files:
-    - "AppData/LocalLow/LandCrab/PEAK/LocalMultiplayer/GlobalSave"
+photon.config_path: "AppData/LocalLow/LandCrab/PEAK/LocalMultiplayer/global.cfg"
+photon.shared_files:
+  - "AppData/LocalLow/LandCrab/PEAK/LocalMultiplayer/GlobalSave"
 
 required_mods:
   - name: "LocalMultiplayer"
