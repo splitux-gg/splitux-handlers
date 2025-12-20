@@ -1,0 +1,18 @@
+# RV There Yet? - Splitux Handler
+# Co-op van road trip game with Goldberg Steam Emulator
+
+name: RV There Yet?
+exec: Ride.exe
+author: splitux
+version: "1.0"
+info: |
+  RV There Yet? co-op splitscreen support.
+  Uses Goldberg Steam Emulator for LAN multiplayer.
+  Note: Game installs to "Ride" folder, not "RV There Yet".
+spec_ver: 3
+steam_appid: 3949040
+proton_path: "Proton - Experimental"
+pause_between_starts: 5.0
+
+goldberg.settings.force_lobby_type.txt: "2"
+goldberg.settings.invite_all.txt: ""

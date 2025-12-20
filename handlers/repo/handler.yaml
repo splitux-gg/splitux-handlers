@@ -1,0 +1,25 @@
+# R.E.P.O. - Splitux Handler
+# Co-op horror game with Photon-based multiplayer
+
+name: R.E.P.O.
+exec: REPO.exe
+author: splitux
+version: "1.0"
+info: |
+  R.E.P.O. co-op splitscreen support using Photon backend.
+  Online co-op horror game - retrieve and extract valuables.
+  Plugin auto-downloaded from Thunderstore on first launch.
+spec_ver: 3
+steam_appid: 3241660
+proton_path: "Proton - Experimental"
+pause_between_starts: 5.0
+
+photon:
+  config_path: "AppData/LocalLow/semiwork/Repo/LocalMultiplayer/global.cfg"
+  shared_files:
+    - "AppData/LocalLow/semiwork/Repo/LocalMultiplayer/GlobalSave"
+  plugin:
+    source: thunderstore
+    community: repo
+    package: Zehs/LocalMultiplayer
+    version: "1.4.0"

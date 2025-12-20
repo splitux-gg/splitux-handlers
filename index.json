@@ -29,6 +29,24 @@
       "updated": "2025-12-02"
     },
     {
+      "id": "repo",
+      "name": "R.E.P.O.",
+      "author": "splitux",
+      "steam_appid": 3241660,
+      "backend": "photon",
+      "description": "Co-op horror extraction game - auto-downloads LocalMultiplayer mod",
+      "updated": "2025-12-20"
+    },
+    {
+      "id": "rv-there-yet",
+      "name": "RV There Yet?",
+      "author": "splitux",
+      "steam_appid": 3949040,
+      "backend": "goldberg",
+      "description": "Co-op van road trip adventure",
+      "updated": "2025-12-20"
+    },
+    {
       "id": "terraria",
       "name": "Terraria",
       "author": "splitux",
