@@ -1,0 +1,38 @@
+# Palworld - Splitux Handler
+
+name: Palworld
+exec: Pal/Binaries/Win64/Palworld-Win64-Shipping.exe
+author: splitux
+version: "1.0"
+info: |
+  Palworld local co-op.
+
+  1. Player 1: create or load a world with co-op/multiplayer enabled, then
+     open the menu and copy the invite code.
+  2. Player 2: choose Join Multiplayer Game and enter the invite code.
+
+  You'll both be in the same world. The first join can sit on the loading
+  screen for a bit - give it a moment.
+
+spec_ver: 3
+steam_appid: 1623730
+proton_path: "Proton - Experimental"
+pause_between_starts: 15.0
+
+# Palworld runs co-op over EOS (Epic), so launch it through the Epic portal.
+args: "-AUTH_LOGIN=unused -AUTH_PASSWORD=cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd -AUTH_TYPE=exchangecode -epicapp=Pal -epicenv=Prod -EpicPortal -epiclocale=en"
+
+# Co-op is EOS-based, so the emulator must use loopback LAN discovery for two
+# instances on one machine.
+env: "EOSLAN_LOCALHOST_MODE=1"
+
+# EOS emulator: provides the lobby + P2P that Palworld's co-op actually rides on.
+eos:
+  appid: "Pal"
+  enable_lan: true
+  disable_online_networking: true
+
+# Goldberg: boot shim only. Palworld's Steam build calls SteamAPI_Init at startup
+# for the ownership check; multiplayer itself runs over EOS, not Steam.
+goldberg:
+  disable_networking: false
