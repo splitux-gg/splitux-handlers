@@ -90,33 +90,6 @@
       "backend": "eos+goldberg",
       "description": "Creature-collecting survival co-op - EOS lobby + P2P over LAN",
       "updated": "2026-06-08"
-    },
-    {
-      "id": "satisfactory",
-      "name": "Satisfactory",
-      "author": "splitux",
-      "steam_appid": 526870,
-      "backend": "eos+goldberg",
-      "description": "Factory-building co-op (DRAFT - untested)",
-      "updated": "2026-06-08"
-    },
-    {
-      "id": "deadzone-rogue",
-      "name": "Deadzone: Rogue",
-      "author": "splitux",
-      "steam_appid": 3228590,
-      "backend": "eos+goldberg",
-      "description": "Roguelite extraction FPS co-op (DRAFT - untested)",
-      "updated": "2026-06-08"
-    },
-    {
-      "id": "subnautica-2",
-      "name": "Subnautica 2",
-      "author": "splitux",
-      "steam_appid": 1962700,
-      "backend": "eos+goldberg",
-      "description": "Underwater survival co-op (DRAFT - untested)",
-      "updated": "2026-06-08"
     }
   ]
 }
