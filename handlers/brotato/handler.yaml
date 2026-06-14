@@ -1,0 +1,31 @@
+# Brotato - Splitux Handler
+# Top-down roguelite shooter (Godot, native Linux). Local-split couch co-op.
+
+name: Brotato
+exec: Brotato.x86_64
+author: splitux
+version: "1.0"
+info: |
+  Brotato local-split couch co-op over splitux-together.
+  Native Linux Godot game.
+spec_ver: 3
+steam_appid: 1942280
+pause_between_starts: 3.0
+
+# Local-splitscreen co-op: ONE game process driven by N controllers (couch
+# co-op), not N networked instances. splitux-together folds all together
+# players into a single instance + N remote seats. Default is `separate` (one
+# instance per player = online/LAN, e.g. V Rising, Terraria).
+coop_mode: local-split
+
+# Godot does its own udev joystick scan and aborts on any device it can't open,
+# so it can't be isolated by hiding devices (/dev/null OR absent node). `none` =
+# no device hiding. Correct for local-split: one game instance, so all pads
+# drive it and there's nothing to isolate from. (SDL2 games keep the default
+# `evdev` allowlist, which they tolerate.)
+input_isolation: none
+
+goldberg:
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
