@@ -90,6 +90,15 @@
       "backend": "eos+goldberg",
       "description": "Creature-collecting survival co-op - EOS lobby + P2P over LAN",
       "updated": "2026-06-08"
+    },
+    {
+      "id": "satisfactory",
+      "name": "Satisfactory",
+      "author": "splitux",
+      "steam_appid": 526870,
+      "backend": "eos+goldberg",
+      "description": "Factory-building co-op - EOS sessions + friends + P2P over LAN",
+      "updated": "2026-06-13"
     }
   ]
 }

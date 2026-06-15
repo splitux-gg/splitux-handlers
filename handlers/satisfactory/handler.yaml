@@ -1,0 +1,52 @@
+# Satisfactory - Splitux Handler
+
+name: Satisfactory
+# Launch the ROOT bootstrap (BootstrapPackagedGame), exactly like Steam does. It
+# relaunches Engine/Binaries/Win64/FactoryGameSteam-Win64-Shipping.exe with the
+# correct UE project. Launching the Engine exe directly makes UE guess the
+# project "FactoryGameSteam" and die on a missing .uproject.
+exec: FactoryGameSteam.exe
+author: splitux
+version: "1.0"
+info: |
+  Satisfactory local co-op over Epic/EOS.
+
+  1. Player 1 (host): start or load a save, open the in-game menu and set the
+     session to a joinable visibility (Friends / "Join via presence"), then keep
+     hosting on the menu or in-world.
+  2. Player 2 (join): open the friends / join menu - the host's game shows up as
+     a joinable friend session. Select it to join.
+
+  The first join can sit on "Joining game..." for a moment while the world
+  streams in - give it time; you'll drop into the host's world.
+
+spec_ver: 3
+steam_appid: 526870
+proton_path: "Proton - Experimental"
+
+# Two processes per instance (bootstrap launcher + shipping game) plus EOS/CEF
+# subprocesses; give the first instance time to settle before the second starts.
+pause_between_starts: 15.0
+
+# splitux EOS emu (eos_sdk_emu) config — its native EOSLAN_* env. EOSLAN_USERNAME
+# is injected per-instance by the eos backend (deterministic per-instance
+# identity). LOCALHOST_MODE = loopback LAN discovery for two instances on one box.
+# P2P_BASE_PORT=47777 keeps the emu off UDP 7777 (Satisfactory's own IP-session
+# netdriver port) so the two never collide.
+# DEBUG=1 matches the working test bench: it makes the emu log the full P2P
+# accept/connect handshake so the splitux-vs-bench EOS-join delta (E007) is
+# visible. Remove once the splitux EOS join is confirmed working.
+env: "EOSLAN_LOCALHOST_MODE=1 EOSLAN_P2P_BASE_PORT=47777 EOSLAN_DEBUG=1"
+
+# EOS emulator: provides the sessions + friends/presence + P2P that Satisfactory's
+# EOS co-op rides on. (appid is informational; the emu derives identity from the
+# per-instance username.)
+eos:
+  appid: "Satisfactory"
+  enable_lan: true
+  disable_online_networking: true
+
+# Goldberg: boot shim. Satisfactory's Steam build calls SteamAPI_Init at startup
+# for the ownership check; co-op itself runs over EOS, not Steam.
+goldberg:
+  disable_networking: false
