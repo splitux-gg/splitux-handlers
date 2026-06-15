@@ -1,6 +1,6 @@
 # Splitux Handlers Registry
 
-Community-contributed game handlers for [Splitux](https://github.com/gabrielgad/splitux) - local splitscreen multiplayer on Linux.
+Community-contributed game handlers for [Splitux](https://github.com/splitux-gg/splitux) - local splitscreen and remote-play multiplayer on Linux.
 
 ## What are Handlers?
 
@@ -30,21 +30,40 @@ handlers/
 
 ### handler.yaml Template
 
+Handlers use **nested backend blocks** (the canonical form). Include three
+required fields, a way to find the game, and one backend block:
+
 ```yaml
 name: Game Name
 exec: game.exe
+spec_ver: 3
 steam_appid: 123456
-backend: goldberg  # or: photon, none
 author: YourName
 version: "1.0"
 info: |
   Brief description of the handler.
   Any special instructions or notes.
+
+# One backend block, auto-detected by being present:
+goldberg:
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
 ```
+
+Available backends: `goldberg` (Steam/gbe_fork), `eos` (Epic Online Services LAN),
+`photon`, `facepunch`, `standalone`. Multiple can coexist (e.g. `eos` + `goldberg`).
+See the full field and emulator-tuning reference:
+[**HANDLER_OPTIONS.md**](https://github.com/splitux-gg/splitux/blob/main/docs/HANDLER_OPTIONS.md)
+(and `assets/handler_template.yaml` in the splitux repo).
+
+> Older handlers using dot-notation (`goldberg.settings.x.txt`) or the legacy
+> `backend:` field still load, but new handlers should use nested blocks.
 
 ### index.json Entry
 
-Add your handler to the `handlers` array:
+Add your handler to the `handlers` array. The `backend` field is a short label
+(e.g. `goldberg`, `eos+goldberg`, `photon`):
 
 ```json
 {
@@ -54,7 +73,7 @@ Add your handler to the `handlers` array:
   "steam_appid": 123456,
   "backend": "goldberg",
   "description": "Brief description for the browse list",
-  "updated": "2025-01-15"
+  "updated": "2026-06-13"
 }
 ```
 

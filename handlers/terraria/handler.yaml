@@ -12,5 +12,7 @@ spec_ver: 3
 steam_appid: 105600
 pause_between_starts: 3.0
 
-goldberg.settings.force_lobby_type.txt: "2"
-goldberg.settings.invite_all.txt: ""
+goldberg:
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""

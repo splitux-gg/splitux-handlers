@@ -11,8 +11,10 @@ steam_appid: 780310
 exec: bin/riftbreaker_win_release.exe
 
 # Goldberg settings
-goldberg.settings.force_lobby_type.txt: "2"
-goldberg.settings.invite_all.txt: ""
+goldberg:
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
 
 # Game config patches - disable Steam networking to use native LAN
 game_patches:
