@@ -1,0 +1,23 @@
+# LEGO Party - Splitux Handler
+# Unity + goldberg. Local-split couch co-op over splitux-together.
+
+name: LEGO Party
+exec: "LEGO Party.exe"
+author: splitux
+version: "1.0"
+info: |
+  LEGO Party local-split couch co-op over splitux-together: two together seats
+  fold into a single game instance (collapse_for_local_split). Unity + goldberg.
+spec_ver: 3
+steam_appid: 1969370
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op), not N
+# networked instances.
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true

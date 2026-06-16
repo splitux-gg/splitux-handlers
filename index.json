@@ -99,6 +99,24 @@
       "backend": "eos+goldberg",
       "description": "Factory-building co-op - EOS sessions + friends + P2P over LAN",
       "updated": "2026-06-13"
+    },
+    {
+      "id": "lego-party",
+      "name": "LEGO Party",
+      "author": "splitux",
+      "steam_appid": 1969370,
+      "backend": "goldberg",
+      "description": "Local-split couch co-op party game (splitux-together)",
+      "updated": "2026-06-16"
+    },
+    {
+      "id": "lego-batman",
+      "name": "LEGO Batman",
+      "author": "splitux",
+      "steam_appid": 2215200,
+      "backend": "eos+goldberg",
+      "description": "LEGO Batman: Legacy of the Dark Knight - local couch co-op (splitux-together)",
+      "updated": "2026-06-16"
     }
   ]
 }

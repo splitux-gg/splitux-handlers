@@ -1,0 +1,30 @@
+# LEGO Batman: Legacy of the Dark Knight - Splitux Handler
+# UE Steam+EOS. LOCAL couch co-op only (drop-in 2nd controller, no online).
+
+name: LEGO Batman
+# Launch the bootstrap launcher (it relaunches the -Shipping exe), NOT -Shipping.
+exec: "LEGOBatmanLotDK.exe"
+author: splitux
+version: "1.0"
+info: |
+  LEGO Batman: Legacy of the Dark Knight local couch co-op over splitux-together:
+  two together seats fold into a single game instance (collapse_for_local_split).
+  The EOS + goldberg emus are present only so the game launches offline (Epic
+  account + Steam); co-op itself is local. Launch the bootstrap exe, not -Shipping.
+spec_ver: 3
+steam_appid: 2215200
+
+coop_mode: local-split
+input_isolation: none
+
+# Bootstrap launcher spawns the shipping exe (+ EOS/CEF subprocesses) — settle time.
+pause_between_starts: 15.0
+
+# goldberg satisfies the Steam API offline; no networking for local couch co-op.
+goldberg:
+  disable_networking: true
+
+# eos_sdk_emu satisfies the Epic-account/EOS init so the game boots offline.
+eos:
+  appid: "2215200"
+  disable_online_networking: true
