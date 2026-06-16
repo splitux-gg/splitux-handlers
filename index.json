@@ -117,6 +117,24 @@
       "backend": "eos+goldberg",
       "description": "LEGO Batman: Legacy of the Dark Knight - local couch co-op (splitux-together)",
       "updated": "2026-06-16"
+    },
+    {
+      "id": "orebound",
+      "name": "Orebound",
+      "author": "splitux",
+      "steam_appid": 2467810,
+      "backend": "goldberg",
+      "description": "Co-op mining/factory adventure - in-game Steam-session hosting",
+      "updated": "2026-06-16"
+    },
+    {
+      "id": "belts-of-iron",
+      "name": "Belts of Iron",
+      "author": "splitux",
+      "steam_appid": 3427850,
+      "backend": "goldberg",
+      "description": "Factory automation co-op - co-located via netns + raw-UDP/Steam-P2P bridge",
+      "updated": "2026-06-16"
     }
   ]
 }

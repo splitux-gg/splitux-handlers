@@ -1,0 +1,18 @@
+# Orebound - Splitux Handler
+# UE5 + goldberg. Online co-op via in-game Steam-session hosting.
+
+name: Orebound
+exec: OreBound.exe
+author: splitux
+version: "1.0"
+info: |
+  Orebound online co-op over splitux: each player runs their own instance; one
+  hosts via MULTIPLAYER -> HOST GAME (Public/Friends), the other joins via the
+  in-game server browser / friends. UE5 + goldberg (Steam sessions + P2P), so
+  plain goldberg handles it co-located — no netns/bridge needed.
+spec_ver: 3
+steam_appid: 2467810
+
+goldberg:
+  bridged_lan: false
+  p2p_bridge: false
