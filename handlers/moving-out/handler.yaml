@@ -1,0 +1,28 @@
+# Moving Out - Splitux Handler
+# Unity + goldberg. Local-split couch co-op over splitux-together.
+#
+# VALIDATED 2026-06-17: two together seats fold into one instance, both pads
+# drive it. NOTE: together/local-split needs the gamescope HEADLESS backend
+# (settings.json gamescope_sdl_backend=false); the SDL backend throttles the
+# game to ~2fps when the browser seat is focused (PR #4 regression).
+
+name: Moving Out
+exec: "MovingOut.exe"
+author: splitux
+version: "1.0"
+info: |
+  Moving Out local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Unity + goldberg; goldberg
+  only satisfies the Steam API init, local couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 996770
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
