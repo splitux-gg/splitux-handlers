@@ -162,6 +162,15 @@
       "backend": "goldberg",
       "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
       "updated": "2026-06-17"
+    },
+    {
+      "id": "cast-n-chill",
+      "name": "Cast n Chill",
+      "author": "splitux",
+      "steam_appid": 3483740,
+      "backend": "goldberg",
+      "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "updated": "2026-06-17"
     }
   ]
 }

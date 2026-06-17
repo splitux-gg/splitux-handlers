@@ -1,0 +1,28 @@
+# Cast n Chill - Splitux Handler
+# Unity + goldberg. Local-split couch co-op over splitux-together.
+#
+# VALIDATED 2026-06-17: boots + streams clean (no goldberg interface popup);
+# local-split couch via together. (Menu input flicker when driving both seats
+# from two tabs on ONE machine is a test-rig artifact — lost keyup on the
+# unfocused tab — not a handler issue; fine with 2 players / 2 gamepads.)
+
+name: Cast n Chill
+exec: "castnchill.exe"
+author: splitux
+version: "1.0"
+info: |
+  Cast n Chill local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Unity + goldberg; goldberg
+  only satisfies the Steam API init, local couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 3483740
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
