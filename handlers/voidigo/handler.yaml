@@ -1,0 +1,28 @@
+# Voidigo - Splitux Handler
+# GameMaker + goldberg. Local-split couch co-op over splitux-together.
+#
+# VALIDATED 2026-06-17: collapse_for_local_split folds 2 together seats into ONE
+# voidigo.exe with both pads wired into its SDL device list; steam_interfaces.txt
+# auto-gen clears the goldberg "Missing interface" exit; streams clean 60fps over
+# together (60 is the game's GameMaker fps lock, not an encoder cap).
+
+name: Voidigo
+exec: "voidigo.exe"
+author: splitux
+version: "1.0"
+info: |
+  Voidigo local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). GameMaker + goldberg; goldberg
+  only satisfies the Steam API init, local couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 1304680
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
