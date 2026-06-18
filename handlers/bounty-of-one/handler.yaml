@@ -1,0 +1,29 @@
+# Bounty of One - Splitux Handler
+# Native Linux (Unity) + goldberg (libsteam_api.so). Local-split couch co-op over splitux-together.
+#
+# STATUS: WORKING under splitux-together (2026-06-18). Native .x86_64 (no Proton); goldberg
+# replaces libsteam_api.so (at BountyOfOne_Data/Plugins/libsteam_api.so, Steamworks.NET title,
+# 31 interfaces). Verified headlessly: boots through goldberg with no "Missing interface" exit,
+# renders the main menu, streams clean over together at 1080p (CQP encoder).
+
+name: Bounty of One
+exec: BountyOfOne.x86_64
+author: splitux
+version: "1.0"
+info: |
+  Bounty of One local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Native Linux (Unity) + goldberg
+  (libsteam_api.so); goldberg only satisfies the Steam API init, local couch co-op needs
+  no networking.
+spec_ver: 3
+steam_appid: 1968730
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
