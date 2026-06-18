@@ -1,0 +1,29 @@
+# Moving Out 2 - Splitux Handler
+# Windows (Unity/il2cpp) + goldberg (steam_api64.dll). Local-split couch co-op over splitux-together.
+#
+# STATUS: WORKING under splitux-together (2026-06-18). Windows mo2.exe under Proton;
+# goldberg replaces mo2_Data/Plugins/x86_64/steam_api64.dll (Steamworks.NET). Boots
+# through goldberg and renders/streams over together (user-confirmed). Sequel to the
+# shipped Moving Out (same studio) — a textbook 1-4 player local couch co-op.
+
+name: Moving Out 2
+exec: "mo2.exe"
+author: splitux
+version: "1.0"
+info: |
+  Moving Out 2 local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Windows (Unity/il2cpp) under
+  Proton + goldberg (steam_api64.dll); goldberg only satisfies the Steam API init, local
+  couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 1641700
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
