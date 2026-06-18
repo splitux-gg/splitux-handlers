@@ -1,0 +1,41 @@
+# Patch Quest - Splitux Handler
+# Unity + goldberg (steamclient mode). Local-split couch co-op over splitux-together.
+#
+# STATUS: WORKING under splitux-together (2026-06-18). Verified headlessly: real
+# game renders (language-select screen) and streams over together (766+ frames).
+# Fix chain (all in splitux code via goldberg.steamclient): deploy goldberg's
+# Windows steamclient into the prefix + DISABLE lsteamclient (so Proton uses
+# goldberg's steamclient instead of bridging to real Steam's native steamclient.so)
+# + GAMEID=umu-<appid> appid fix + Steam launch-context env. FINAL wall was SteamStub
+# DRM (.bind section) → "Application load error 3:0000065432"; fixed by a Steamless-
+# stripped exe that splitux overlay-shadows from the cache:
+#   ~/.local/share/splitux/steamless/1347970/Patch Quest.exe   (one-time Steamless run)
+# Real game install stays pristine. STILL TODO: 2-seat couch-fold; verify on a fresh
+# prefix whether the HKCU Valve\Steam\ActiveProcess registry keys must be written.
+# See goldberg-steamclient-gap memory.
+
+name: Patch Quest
+exec: "Patch Quest.exe"
+author: splitux
+version: "1.0"
+info: |
+  Patch Quest local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Unity + goldberg; goldberg
+  only satisfies the Steam API init, local couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 1347970
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+# Patch Quest resolves Steam via the steamclient path (its lsteamclient loads
+# C:\…\Steam\steamclient64.dll directly) and never loads goldberg's steam_api64,
+# so it falls through to real Steam and exits. steamclient: true makes splitux
+# deploy goldberg's steamclient into the prefix so the emulator engages offline.
+goldberg:
+  disable_networking: true
+  steamclient: true

@@ -1,0 +1,31 @@
+# LEGO Star Wars: The Skywalker Saga - Splitux Handler
+# goldberg (plain steam_api). Local-split couch co-op over splitux-together.
+#
+# STATUS: WORKING under splitux-together (2026-06-18). Verified headlessly: the
+# game boots through goldberg (steam_api64.dll, 30 interfaces) and renders the
+# language-select screen, streaming clean over together at 1080p60 (CQP encoder).
+# Plain goldberg — the game loads steam_api64 directly, so no steamclient mode is
+# needed; goldberg only satisfies the Steam API init and local couch co-op needs
+# no networking.
+
+name: LEGO Skywalker Saga
+exec: "LEGOSTARWARSSKYWALKERSAGA_DX11.exe"
+author: splitux
+version: "1.0"
+info: |
+  LEGO Star Wars: The Skywalker Saga local-split couch co-op over splitux-together:
+  two together seats fold into a single game instance (collapse_for_local_split).
+  goldberg satisfies the Steam API; local couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 920210
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op), not N
+# networked instances.
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
