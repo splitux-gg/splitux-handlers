@@ -1,0 +1,30 @@
+# Lovers in a Dangerous Spacetime - Splitux Handler
+# Native Linux (Unity) + goldberg (libsteam_api.so). Local-split couch co-op over splitux-together.
+#
+# VALIDATED 2026-06-18: native Linux (Unity) + goldberg (libsteam_api.so 32+64-bit, 23
+# interfaces) boots clean — no "Missing interface" exit — window in 1.0s, streams over
+# together. THE classic 1-4 player local couch co-op game (shared-screen); ldd clean (no
+# missing libs). Confirmed via single-seat smoke; couch-fold assumed from the local-split
+# model (genuine local couch game, so collapse_for_local_split is correct).
+
+name: Lovers in a Dangerous Spacetime
+exec: LoversInADangerousSpacetime.x86_64
+author: splitux
+version: "1.0"
+info: |
+  Lovers in a Dangerous Spacetime local-split couch co-op over splitux-together: two
+  together seats fold into a single game instance (collapse_for_local_split). Native Linux
+  (Unity) + goldberg (libsteam_api.so); goldberg only satisfies the Steam API init, local
+  couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 252110
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
