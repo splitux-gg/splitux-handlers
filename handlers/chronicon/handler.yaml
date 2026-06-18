@@ -1,0 +1,38 @@
+# Chronicon - Splitux Handler
+# Native Linux + goldberg (libsteam_api.so). Local-split couch co-op over splitux-together.
+#
+# VALIDATED 2026-06-18: boots clean through the Steam scout runtime + goldberg
+# (libsteam_api.so, 31 interfaces), reaches the game, streams over together. No
+# manual game-dir edits — the runtime provides the old Debian libs. 4-player ARPG
+# with local (shared-screen) co-op.
+#
+# RUNTIME: scout. Chronicon is built against the Steam Linux Runtime (scout) — like
+# most older native Steam titles — so it needs that runtime's old Debian libs
+# (libcurl-gnutls.so.4 [CURL_GNUTLS_3], libcrypto/libssl.so.1.0.0, libgcrypt.11,
+# libidn.11, librtmp.0, libnettle.6, libhogweed.4). splitux launches it through the
+# scout run.sh (exactly as Steam does), which provides them with proper host-lib
+# pinning. The game is complete; it just must run inside its runtime. (exec is the
+# game's own run.sh launcher, which sets up its bundled libs + cwd.)
+
+name: Chronicon
+exec: run.sh
+runtime: scout
+author: splitux
+version: "1.0"
+info: |
+  Chronicon local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Native Linux + goldberg
+  (libsteam_api.so), launched through the Steam scout runtime; goldberg only satisfies
+  the Steam API init, local couch co-op needs no networking.
+spec_ver: 3
+steam_appid: 375480
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true

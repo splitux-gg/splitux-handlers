@@ -198,6 +198,15 @@
       "backend": "goldberg",
       "description": "Native Linux (Unity) local-split couch co-op via splitux-together (collapse_for_local_split)",
       "updated": "2026-06-18"
+    },
+    {
+      "id": "chronicon",
+      "name": "Chronicon",
+      "author": "splitux",
+      "steam_appid": 375480,
+      "backend": "goldberg",
+      "description": "Native Linux local-split couch co-op via splitux-together; runs through the Steam scout runtime",
+      "updated": "2026-06-18"
     }
   ]
 }
