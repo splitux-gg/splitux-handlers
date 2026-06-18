@@ -180,6 +180,15 @@
       "backend": "goldberg",
       "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
       "updated": "2026-06-17"
+    },
+    {
+      "id": "lumencraft",
+      "name": "Lumencraft",
+      "author": "splitux",
+      "steam_appid": 1713810,
+      "backend": "goldberg",
+      "description": "Native Linux local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "updated": "2026-06-18"
     }
   ]
 }

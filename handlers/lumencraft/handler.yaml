@@ -1,0 +1,32 @@
+# Lumencraft - Splitux Handler
+# Native Linux + goldberg (libsteam_api.so). Local-split couch co-op over splitux-together.
+#
+# VALIDATED 2026-06-18: native Linux + goldberg (libsteam_api.so, 31 interfaces) boots
+# clean — no "Missing interface" exit — and streams flawless 60fps over together (0 lost,
+# 1-2ms jitter; vcn-enc ~40% headroom). Built off the Nuclear Throne / Cast n Chill
+# template, adapted for a NATIVE Linux binary (exec is .x86_64, no Proton).
+# NOTE: confirmed via single-seat smoke (boot + stream). The 2-seat couch-fold (both pads
+# -> one instance) is assumed from the local-split model but not yet hard-verified; if its
+# co-op turns out online-only, switch to the LAN/online goldberg model (two instances).
+
+name: Lumencraft
+exec: Lumencraft.x86_64
+author: splitux
+version: "1.0"
+info: |
+  Lumencraft local-split couch co-op over splitux-together: two together seats fold
+  into a single game instance (collapse_for_local_split). Native Linux + goldberg
+  (libsteam_api.so); goldberg only satisfies the Steam API init, local couch co-op
+  needs no networking.
+spec_ver: 3
+steam_appid: 1713810
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
