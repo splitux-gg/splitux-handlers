@@ -17,6 +17,9 @@ info: |
 spec_ver: 3
 steam_appid: 1304680
 
+# Save location, relative to the Proton prefix user dir (auto-resolved via appid).
+original_save_path: "AppData/Local/voidigo"
+
 # Local-splitscreen: ONE game instance driven by N seats (couch co-op).
 coop_mode: local-split
 

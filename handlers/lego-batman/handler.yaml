@@ -13,6 +13,10 @@ info: |
 spec_ver: 3
 steam_appid: 2215200
 
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/Local/Warner Bros. Interactive Entertainment/LEGO Batman - Legacy of the Dark Knight/SaveGames/steam"
+save_steam_id_remap: true
+
 coop_mode: local-split
 input_isolation: none
 

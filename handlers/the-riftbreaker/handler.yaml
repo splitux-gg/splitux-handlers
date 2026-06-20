@@ -7,6 +7,9 @@ spec_ver: 3
 # Steam app ID (auto-detects install location)
 steam_appid: 780310
 
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "Documents/The Riftbreaker"
+
 # Executable path relative to game root
 exec: bin/riftbreaker_win_release.exe
 

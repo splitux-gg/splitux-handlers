@@ -25,6 +25,9 @@ info: |
 spec_ver: 3
 steam_appid: 1347970
 
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/LocalLow/Lychee Game Labs/Patch Quest"
+
 # Local-splitscreen: ONE game instance driven by N seats (couch co-op).
 coop_mode: local-split
 

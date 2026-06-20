@@ -10,6 +10,10 @@ info: |
   Avoid: first launch is slow to load — let the host's world finish before joining.
 spec_ver: 3
 steam_appid: 1604030
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/LocalLow/Stunlock Studios/VRising"
+save_steam_id_remap: true
 proton_path: "Proton - Experimental"
 pause_between_starts: 15.0
 

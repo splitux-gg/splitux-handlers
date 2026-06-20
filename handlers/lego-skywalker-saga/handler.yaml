@@ -19,6 +19,10 @@ info: |
 spec_ver: 3
 steam_appid: 920210
 
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/Roaming/Warner Bros. Interactive Entertainment/LEGO Star Wars - The Skywalker Saga/SAVEDGAMES/STEAM"
+save_steam_id_remap: true
+
 # Local-splitscreen: ONE game instance driven by N seats (couch co-op), not N
 # networked instances.
 coop_mode: local-split

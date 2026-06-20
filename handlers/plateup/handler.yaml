@@ -1,0 +1,25 @@
+# PlateUp! - Splitux Handler
+# Unity + goldberg. Online co-op via in-game Steam lobby.
+#
+# STATUS: STAGED / UNCONFIRMED — authored 2026-06-17 off the Orebound template.
+# Launch + host/join co-op NOT yet smoke-tested. Verify co-located join works on
+# plain goldberg; if joiners can't reach the host's lobby co-located, switch to
+# goldberg.bridged_lan + p2p_bridge (the Belts of Iron pattern).
+
+name: PlateUp!
+exec: PlateUp.exe
+author: splitux
+version: "1.0"
+info: |
+  PlateUp! — online co-op via splitux.
+  Play: the host creates an online game (Steam lobby), the others join via invite/lobby.
+  Avoid: one instance per player; the first join can take a few seconds.
+spec_ver: 3
+steam_appid: 1599600
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/LocalLow/It's Happening/PlateUp"
+
+goldberg:
+  bridged_lan: false
+  p2p_bridge: false

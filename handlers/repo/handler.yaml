@@ -11,6 +11,9 @@ info: |
   Avoid: one instance per player; the first join can take a few seconds.
 spec_ver: 3
 steam_appid: 3241660
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/LocalLow/semiwork/Repo"
 proton_path: "Proton - Experimental"
 pause_between_starts: 5.0
 

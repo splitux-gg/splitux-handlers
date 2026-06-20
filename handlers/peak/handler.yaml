@@ -11,6 +11,9 @@ info: |
   Avoid: needs the bundled LocalMultiplayer mod; one instance per player.
 spec_ver: 3
 steam_appid: 3527290
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/LocalLow/LandCrab/PEAK"
 proton_path: "Proton - Experimental"
 pause_between_starts: 5.0
 

@@ -11,6 +11,10 @@ info: |
   Avoid: one instance per player; the first join can take a few seconds.
 spec_ver: 3
 steam_appid: 3949040
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/Local/Ride/Saved/SaveGames"
+save_steam_id_remap: true
 proton_path: "Proton - Experimental"
 pause_between_starts: 5.0
 

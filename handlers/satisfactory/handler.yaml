@@ -14,6 +14,10 @@ info: |
   Avoid: the first join can sit on "Joining game..." while the world streams — give it time.
 spec_ver: 3
 steam_appid: 526870
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/Local/FactoryGame/Saved/SaveGames"
+save_steam_id_remap: true
 proton_path: "Proton - Experimental"
 
 # Two processes per instance (bootstrap launcher + shipping game) plus EOS/CEF

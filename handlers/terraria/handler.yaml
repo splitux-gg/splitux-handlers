@@ -11,6 +11,9 @@ info: |
   Avoid: the host must be in-world before others join; one instance per player.
 spec_ver: 3
 steam_appid: 105600
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "~/.local/share/Terraria"
 pause_between_starts: 3.0
 
 goldberg:
