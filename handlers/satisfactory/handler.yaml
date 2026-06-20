@@ -9,17 +9,9 @@ exec: FactoryGameSteam.exe
 author: splitux
 version: "1.0"
 info: |
-  Satisfactory local co-op over Epic/EOS.
-
-  1. Player 1 (host): start or load a save, open the in-game menu and set the
-     session to a joinable visibility (Friends / "Join via presence"), then keep
-     hosting on the menu or in-world.
-  2. Player 2 (join): open the friends / join menu - the host's game shows up as
-     a joinable friend session. Select it to join.
-
-  The first join can sit on "Joining game..." for a moment while the world
-  streams in - give it time; you'll drop into the host's world.
-
+  Satisfactory — online co-op via splitux.
+  Play: the host starts/loads a save and sets the session joinable (Friends / Join via presence), the others join from the friends/session menu.
+  Avoid: the first join can sit on "Joining game..." while the world streams — give it time.
 spec_ver: 3
 steam_appid: 526870
 proton_path: "Proton - Experimental"

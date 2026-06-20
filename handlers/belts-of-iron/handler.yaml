@@ -6,12 +6,9 @@ exec: BeltsOfIron.exe
 author: splitux
 version: "1.0"
 info: |
-  Belts of Iron co-op over splitux. Each player runs their own instance and joins
-  the host via the in-game LAN/Steam session. Co-located co-op needs goldberg's
-  per-instance network namespace (bridged_lan) PLUS the raw-UDP <-> legacy-Steam-P2P
-  bridge (p2p_bridge): the host listens on virtual P2P while joiners connect raw
-  UDP, so the two transports must be bridged. Requires a goldberg build with the
-  GSE_IP_P2P_BRIDGE bridge (gbe_fork-splitux v1.1.0+).
+  Belts of Iron — online co-op via splitux.
+  Play: the host opens a LAN/Steam game from the menu, the others join the host's session.
+  Avoid: one instance per player; the first join can take a few seconds.
 spec_ver: 3
 steam_appid: 3427850
 

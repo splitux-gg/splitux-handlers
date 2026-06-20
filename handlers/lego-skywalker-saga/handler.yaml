@@ -13,9 +13,9 @@ exec: "LEGOSTARWARSSKYWALKERSAGA_DX11.exe"
 author: splitux
 version: "1.0"
 info: |
-  LEGO Star Wars: The Skywalker Saga local-split couch co-op over splitux-together:
-  two together seats fold into a single game instance (collapse_for_local_split).
-  goldberg satisfies the Steam API; local couch co-op needs no networking.
+  LEGO Skywalker Saga — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad).
+  Avoid: there's no in-game multiplayer menu — everyone shares a single screen and save.
 spec_ver: 3
 steam_appid: 920210
 

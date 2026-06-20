@@ -7,10 +7,9 @@ exec: "LEGOBatmanLotDK.exe"
 author: splitux
 version: "1.0"
 info: |
-  LEGO Batman: Legacy of the Dark Knight local couch co-op over splitux-together:
-  two together seats fold into a single game instance (collapse_for_local_split).
-  The EOS + goldberg emus are present only so the game launches offline (Epic
-  account + Steam); co-op itself is local. Launch the bootstrap exe, not -Shipping.
+  LEGO Batman — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad).
+  Avoid: there's no in-game multiplayer menu — everyone shares a single screen and save.
 spec_ver: 3
 steam_appid: 2215200
 

@@ -7,7 +7,7 @@
       "author": "splitux",
       "steam_appid": 361420,
       "backend": "goldberg",
-      "description": "Space exploration sandbox with co-op support",
+      "description": "Space sandbox — online co-op",
       "updated": "2025-12-02"
     },
     {
@@ -16,7 +16,7 @@
       "author": "splitux",
       "steam_appid": 548430,
       "backend": "goldberg",
-      "description": "Co-op mining FPS - Rock and Stone!",
+      "description": "Mining FPS — online co-op",
       "updated": "2025-12-02"
     },
     {
@@ -25,7 +25,7 @@
       "author": "splitux",
       "steam_appid": 3527290,
       "backend": "photon",
-      "description": "Cooperative climbing adventure - requires LocalMultiplayer mod",
+      "description": "Co-op climbing — online co-op",
       "updated": "2025-12-02"
     },
     {
@@ -34,7 +34,7 @@
       "author": "splitux",
       "steam_appid": 3241660,
       "backend": "photon",
-      "description": "Co-op horror extraction game - auto-downloads LocalMultiplayer mod",
+      "description": "Co-op horror extraction — online co-op",
       "updated": "2025-12-20"
     },
     {
@@ -43,7 +43,7 @@
       "author": "splitux",
       "steam_appid": 3949040,
       "backend": "goldberg",
-      "description": "Co-op van road trip adventure",
+      "description": "Road-trip co-op — online co-op",
       "updated": "2025-12-20"
     },
     {
@@ -52,7 +52,7 @@
       "author": "splitux",
       "steam_appid": 105600,
       "backend": "goldberg",
-      "description": "2D sandbox adventure - native Linux",
+      "description": "Sandbox adventure — online co-op",
       "updated": "2025-12-02"
     },
     {
@@ -61,7 +61,7 @@
       "author": "splitux",
       "steam_appid": 780310,
       "backend": "goldberg",
-      "description": "Base-building action RPG with native LAN support",
+      "description": "Base-building survival — online co-op",
       "updated": "2025-11-30"
     },
     {
@@ -70,7 +70,7 @@
       "author": "splitux",
       "steam_appid": 632360,
       "backend": "goldberg",
-      "description": "Roguelike co-op shooter - auto-downloads P2P fix plugin",
+      "description": "Roguelite shooter — online co-op",
       "updated": "2025-12-21"
     },
     {
@@ -79,7 +79,7 @@
       "author": "splitux",
       "steam_appid": 1604030,
       "backend": "eos+goldberg",
-      "description": "Open-world vampire survival co-op - EOS login + self-hosted Steam server",
+      "description": "Vampire survival — online co-op",
       "updated": "2026-06-08"
     },
     {
@@ -88,7 +88,7 @@
       "author": "splitux",
       "steam_appid": 1623730,
       "backend": "eos+goldberg",
-      "description": "Creature-collecting survival co-op - EOS lobby + P2P over LAN",
+      "description": "Creature-collection survival — online co-op",
       "updated": "2026-06-08"
     },
     {
@@ -97,7 +97,7 @@
       "author": "splitux",
       "steam_appid": 526870,
       "backend": "eos+goldberg",
-      "description": "Factory-building co-op - EOS sessions + friends + P2P over LAN",
+      "description": "Factory builder — online co-op",
       "updated": "2026-06-13"
     },
     {
@@ -106,7 +106,7 @@
       "author": "splitux",
       "steam_appid": 1969370,
       "backend": "goldberg",
-      "description": "Local-split couch co-op party game (splitux-together)",
+      "description": "Party minigames — couch co-op",
       "updated": "2026-06-16"
     },
     {
@@ -115,7 +115,7 @@
       "author": "splitux",
       "steam_appid": 2215200,
       "backend": "eos+goldberg",
-      "description": "LEGO Batman: Legacy of the Dark Knight - local couch co-op (splitux-together)",
+      "description": "LEGO action-adventure — couch co-op",
       "updated": "2026-06-16"
     },
     {
@@ -124,7 +124,7 @@
       "author": "splitux",
       "steam_appid": 2467810,
       "backend": "goldberg",
-      "description": "Co-op mining/factory adventure - in-game Steam-session hosting",
+      "description": "Mining adventure — online co-op",
       "updated": "2026-06-16"
     },
     {
@@ -133,7 +133,7 @@
       "author": "splitux",
       "steam_appid": 3427850,
       "backend": "goldberg",
-      "description": "Factory automation co-op - co-located via netns + raw-UDP/Steam-P2P bridge",
+      "description": "Factory builder — online co-op",
       "updated": "2026-06-16"
     },
     {
@@ -142,7 +142,7 @@
       "author": "splitux",
       "steam_appid": 996770,
       "backend": "goldberg",
-      "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Moving party game — couch co-op",
       "updated": "2026-06-17"
     },
     {
@@ -151,7 +151,7 @@
       "author": "splitux",
       "steam_appid": 1951230,
       "backend": "goldberg",
-      "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Stealth romp — couch co-op",
       "updated": "2026-06-17"
     },
     {
@@ -160,7 +160,7 @@
       "author": "splitux",
       "steam_appid": 242680,
       "backend": "goldberg",
-      "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Roguelite shooter — couch co-op",
       "updated": "2026-06-17"
     },
     {
@@ -169,7 +169,7 @@
       "author": "splitux",
       "steam_appid": 3483740,
       "backend": "goldberg",
-      "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Fishing sim — couch co-op",
       "updated": "2026-06-17"
     },
     {
@@ -178,7 +178,7 @@
       "author": "splitux",
       "steam_appid": 1304680,
       "backend": "goldberg",
-      "description": "Local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Roguelite shooter — couch co-op",
       "updated": "2026-06-17"
     },
     {
@@ -187,7 +187,7 @@
       "author": "splitux",
       "steam_appid": 1713810,
       "backend": "goldberg",
-      "description": "Native Linux local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Mining tower-defense — couch co-op",
       "updated": "2026-06-18"
     },
     {
@@ -196,7 +196,7 @@
       "author": "splitux",
       "steam_appid": 252110,
       "backend": "goldberg",
-      "description": "Native Linux (Unity) local-split couch co-op via splitux-together (collapse_for_local_split)",
+      "description": "Spaceship action — couch co-op",
       "updated": "2026-06-18"
     },
     {
@@ -205,7 +205,7 @@
       "author": "splitux",
       "steam_appid": 375480,
       "backend": "goldberg",
-      "description": "Native Linux local-split couch co-op via splitux-together; runs through the Steam scout runtime",
+      "description": "Action RPG — couch co-op",
       "updated": "2026-06-18"
     }
   ]

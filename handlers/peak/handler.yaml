@@ -6,13 +6,9 @@ exec: PEAK.exe
 author: splitux
 version: "1.1"
 info: |
-  PEAK co-op splitscreen support using Photon backend.
-  Cooperative climbing adventure where players scale a mysterious mountain.
-
-  REQUIRES MANUAL MOD INSTALLATION:
-  1. Download LocalMultiplayer from Thunderstore
-  2. Install BepInEx and the LocalMultiplayer plugin
-  3. The mod handles Steam account spoofing for local play
+  PEAK — online co-op via splitux.
+  Play: the host creates a game, the others join from the in-game lobby (Photon-backed).
+  Avoid: needs the bundled LocalMultiplayer mod; one instance per player.
 spec_ver: 3
 steam_appid: 3527290
 proton_path: "Proton - Experimental"

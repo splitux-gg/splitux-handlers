@@ -6,9 +6,9 @@ exec: Ride.exe
 author: splitux
 version: "1.0"
 info: |
-  RV There Yet? co-op splitscreen support.
-  Uses Goldberg Steam Emulator for LAN multiplayer.
-  Note: Game installs to "Ride" folder, not "RV There Yet".
+  RV There Yet? — online co-op via splitux.
+  Play: the host starts a game, the others join it from the in-game session/friends list.
+  Avoid: one instance per player; the first join can take a few seconds.
 spec_ver: 3
 steam_appid: 3949040
 proton_path: "Proton - Experimental"

@@ -5,15 +5,9 @@ exec: Pal/Binaries/Win64/Palworld-Win64-Shipping.exe
 author: splitux
 version: "1.0"
 info: |
-  Palworld local co-op.
-
-  1. Player 1: create or load a world with co-op/multiplayer enabled, then
-     open the menu and copy the invite code.
-  2. Player 2: choose Join Multiplayer Game and enter the invite code.
-
-  You'll both be in the same world. The first join can sit on the loading
-  screen for a bit - give it a moment.
-
+  Palworld — online co-op via splitux.
+  Play: the host starts or loads a world, the others join via the in-game invite code or friends list.
+  Avoid: let the world finish loading before others join; one instance per player.
 spec_ver: 3
 steam_appid: 1623730
 proton_path: "Proton - Experimental"

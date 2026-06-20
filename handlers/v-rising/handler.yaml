@@ -5,15 +5,9 @@ exec: VRising.exe
 author: splitux
 version: "1.0"
 info: |
-  V Rising local co-op.
-
-  1. Player 1: from the menu, choose Play and start or load a private game.
-     Wait a few seconds for the world to load.
-  2. Player 2: from the menu, choose Play and join Player 1's game.
-
-  You'll both be in the same world together. First launch can take a little
-  while to load - give it a moment.
-
+  V Rising — online co-op via splitux.
+  Play: the host starts or loads a private game, the others join it from the in-game Play menu.
+  Avoid: first launch is slow to load — let the host's world finish before joining.
 spec_ver: 3
 steam_appid: 1604030
 proton_path: "Proton - Experimental"

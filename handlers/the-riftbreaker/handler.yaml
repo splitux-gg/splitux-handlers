@@ -28,8 +28,6 @@ pause_between_starts: 5.0
 author: splitux
 version: "1.0"
 info: |
-  The Riftbreaker co-op splitscreen support.
-  Uses disable_steam=1 workaround to bypass Steam Networking Sockets
-  and use native LAN multiplayer instead.
-
-  Tested working: lobby discovery and joining works correctly.
+  The Riftbreaker — online co-op via splitux.
+  Play: the host starts a co-op campaign/match, the others join it from the in-game menu.
+  Avoid: one instance per player; the first join can take a few seconds.
