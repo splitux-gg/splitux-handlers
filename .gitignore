@@ -1,0 +1,7 @@
+
+# Game art is fetched from the Steam CDN by appid via scripts/fetch-art.py
+# (run after install), not committed — keeps the registry to handler config only.
+handlers/*/icon.jpg
+handlers/*/box_art.jpg
+handlers/*/hero.jpg
+handlers/*/logo.png
