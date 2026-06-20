@@ -1,0 +1,35 @@
+# Across the Obelisk - Splitux Handler
+# Roguelite deckbuilding RPG with 2-4 player co-op
+
+name: Across the Obelisk
+exec: AcrossTheObelisk.x86_64
+spec_ver: 3
+
+# Steam AppID
+steam_appid: 1385380
+
+# Bind ~/.steam for Steam API access (needs steamclient.so)
+steam_home_path: "~/.steam"
+
+# NOTE: No Steam Runtime for native Linux + BepInEx
+# Steam Runtime interferes with LD_PRELOAD and the test script worked without it
+
+# NOTE: NO Goldberg for native Linux + BepInEx (they're incompatible)
+# Goldberg's libsteam_api.so breaks BepInEx's LinuxConsoleDriver
+
+# Facepunch.Steamworks patches via BepInEx plugin
+# SplituxFacepunch spoofs Steam ID at C# level (no DLL replacement needed)
+facepunch.spoof_identity: true
+facepunch.force_valid: true
+facepunch.photon_bypass: true    # CRITICAL: Sets AuthType=255 (None) for Photon multiplayer
+
+# Save game location (native Linux path)
+original_save_path: "~/.config/unity3d/Dreamsite Games/AcrossTheObelisk"
+
+# Metadata
+author: splitux
+version: "1.2"
+info: |
+  Across the Obelisk — online co-op via splitux.
+  Play: one player hosts a run, the others join it from the in-game lobby.
+  Avoid: one instance per player; the first join can take a few seconds.

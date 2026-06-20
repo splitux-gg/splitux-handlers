@@ -2,6 +2,15 @@
   "version": 1,
   "handlers": [
     {
+      "id": "across-the-obelisk",
+      "name": "Across the Obelisk",
+      "author": "splitux",
+      "steam_appid": 1385380,
+      "backend": "photon",
+      "description": "Roguelite deckbuilder — online co-op",
+      "updated": "2026-06-20"
+    },
+    {
       "id": "astroneer",
       "name": "ASTRONEER",
       "author": "splitux",
@@ -9,6 +18,33 @@
       "backend": "goldberg",
       "description": "Space sandbox — online co-op",
       "updated": "2025-12-02"
+    },
+    {
+      "id": "belts-of-iron",
+      "name": "Belts of Iron",
+      "author": "splitux",
+      "steam_appid": 3427850,
+      "backend": "goldberg",
+      "description": "Factory builder — online co-op",
+      "updated": "2026-06-16"
+    },
+    {
+      "id": "cast-n-chill",
+      "name": "Cast n Chill",
+      "author": "splitux",
+      "steam_appid": 3483740,
+      "backend": "goldberg",
+      "description": "Fishing sim — couch co-op",
+      "updated": "2026-06-17"
+    },
+    {
+      "id": "chronicon",
+      "name": "Chronicon",
+      "author": "splitux",
+      "steam_appid": 375480,
+      "backend": "goldberg",
+      "description": "Action RPG — couch co-op",
+      "updated": "2026-06-18"
     },
     {
       "id": "deep-rock-galactic",
@@ -20,6 +56,78 @@
       "updated": "2025-12-02"
     },
     {
+      "id": "lego-batman",
+      "name": "LEGO Batman",
+      "author": "splitux",
+      "steam_appid": 2215200,
+      "backend": "eos+goldberg",
+      "description": "LEGO action-adventure — couch co-op",
+      "updated": "2026-06-16"
+    },
+    {
+      "id": "lego-party",
+      "name": "LEGO Party",
+      "author": "splitux",
+      "steam_appid": 1969370,
+      "backend": "goldberg",
+      "description": "Party minigames — couch co-op",
+      "updated": "2026-06-16"
+    },
+    {
+      "id": "lovers-in-a-dangerous-spacetime",
+      "name": "Lovers in a Dangerous Spacetime",
+      "author": "splitux",
+      "steam_appid": 252110,
+      "backend": "goldberg",
+      "description": "Spaceship action — couch co-op",
+      "updated": "2026-06-18"
+    },
+    {
+      "id": "lumencraft",
+      "name": "Lumencraft",
+      "author": "splitux",
+      "steam_appid": 1713810,
+      "backend": "goldberg",
+      "description": "Mining tower-defense — couch co-op",
+      "updated": "2026-06-18"
+    },
+    {
+      "id": "moving-out",
+      "name": "Moving Out",
+      "author": "splitux",
+      "steam_appid": 996770,
+      "backend": "goldberg",
+      "description": "Moving party game — couch co-op",
+      "updated": "2026-06-17"
+    },
+    {
+      "id": "nuclear-throne",
+      "name": "Nuclear Throne",
+      "author": "splitux",
+      "steam_appid": 242680,
+      "backend": "goldberg",
+      "description": "Roguelite shooter — couch co-op",
+      "updated": "2026-06-17"
+    },
+    {
+      "id": "orebound",
+      "name": "Orebound",
+      "author": "splitux",
+      "steam_appid": 2467810,
+      "backend": "goldberg",
+      "description": "Mining adventure — online co-op",
+      "updated": "2026-06-16"
+    },
+    {
+      "id": "palworld",
+      "name": "Palworld",
+      "author": "splitux",
+      "steam_appid": 1623730,
+      "backend": "eos+goldberg",
+      "description": "Creature-collection survival — online co-op",
+      "updated": "2026-06-08"
+    },
+    {
       "id": "peak",
       "name": "PEAK",
       "author": "splitux",
@@ -27,6 +135,15 @@
       "backend": "photon",
       "description": "Co-op climbing — online co-op",
       "updated": "2025-12-02"
+    },
+    {
+      "id": "pizza-possum",
+      "name": "Pizza Possum",
+      "author": "splitux",
+      "steam_appid": 1951230,
+      "backend": "goldberg",
+      "description": "Stealth romp — couch co-op",
+      "updated": "2026-06-17"
     },
     {
       "id": "repo",
@@ -38,6 +155,15 @@
       "updated": "2025-12-20"
     },
     {
+      "id": "risk-of-rain-2",
+      "name": "Risk of Rain 2",
+      "author": "splitux",
+      "steam_appid": 632360,
+      "backend": "goldberg",
+      "description": "Roguelite shooter — online co-op",
+      "updated": "2025-12-21"
+    },
+    {
       "id": "rv-there-yet",
       "name": "RV There Yet?",
       "author": "splitux",
@@ -45,6 +171,15 @@
       "backend": "goldberg",
       "description": "Road-trip co-op — online co-op",
       "updated": "2025-12-20"
+    },
+    {
+      "id": "satisfactory",
+      "name": "Satisfactory",
+      "author": "splitux",
+      "steam_appid": 526870,
+      "backend": "eos+goldberg",
+      "description": "Factory builder — online co-op",
+      "updated": "2026-06-13"
     },
     {
       "id": "terraria",
@@ -65,15 +200,6 @@
       "updated": "2025-11-30"
     },
     {
-      "id": "risk-of-rain-2",
-      "name": "Risk of Rain 2",
-      "author": "splitux",
-      "steam_appid": 632360,
-      "backend": "goldberg",
-      "description": "Roguelite shooter — online co-op",
-      "updated": "2025-12-21"
-    },
-    {
       "id": "v-rising",
       "name": "V Rising",
       "author": "splitux",
@@ -83,96 +209,6 @@
       "updated": "2026-06-08"
     },
     {
-      "id": "palworld",
-      "name": "Palworld",
-      "author": "splitux",
-      "steam_appid": 1623730,
-      "backend": "eos+goldberg",
-      "description": "Creature-collection survival — online co-op",
-      "updated": "2026-06-08"
-    },
-    {
-      "id": "satisfactory",
-      "name": "Satisfactory",
-      "author": "splitux",
-      "steam_appid": 526870,
-      "backend": "eos+goldberg",
-      "description": "Factory builder — online co-op",
-      "updated": "2026-06-13"
-    },
-    {
-      "id": "lego-party",
-      "name": "LEGO Party",
-      "author": "splitux",
-      "steam_appid": 1969370,
-      "backend": "goldberg",
-      "description": "Party minigames — couch co-op",
-      "updated": "2026-06-16"
-    },
-    {
-      "id": "lego-batman",
-      "name": "LEGO Batman",
-      "author": "splitux",
-      "steam_appid": 2215200,
-      "backend": "eos+goldberg",
-      "description": "LEGO action-adventure — couch co-op",
-      "updated": "2026-06-16"
-    },
-    {
-      "id": "orebound",
-      "name": "Orebound",
-      "author": "splitux",
-      "steam_appid": 2467810,
-      "backend": "goldberg",
-      "description": "Mining adventure — online co-op",
-      "updated": "2026-06-16"
-    },
-    {
-      "id": "belts-of-iron",
-      "name": "Belts of Iron",
-      "author": "splitux",
-      "steam_appid": 3427850,
-      "backend": "goldberg",
-      "description": "Factory builder — online co-op",
-      "updated": "2026-06-16"
-    },
-    {
-      "id": "moving-out",
-      "name": "Moving Out",
-      "author": "splitux",
-      "steam_appid": 996770,
-      "backend": "goldberg",
-      "description": "Moving party game — couch co-op",
-      "updated": "2026-06-17"
-    },
-    {
-      "id": "pizza-possum",
-      "name": "Pizza Possum",
-      "author": "splitux",
-      "steam_appid": 1951230,
-      "backend": "goldberg",
-      "description": "Stealth romp — couch co-op",
-      "updated": "2026-06-17"
-    },
-    {
-      "id": "nuclear-throne",
-      "name": "Nuclear Throne",
-      "author": "splitux",
-      "steam_appid": 242680,
-      "backend": "goldberg",
-      "description": "Roguelite shooter — couch co-op",
-      "updated": "2026-06-17"
-    },
-    {
-      "id": "cast-n-chill",
-      "name": "Cast n Chill",
-      "author": "splitux",
-      "steam_appid": 3483740,
-      "backend": "goldberg",
-      "description": "Fishing sim — couch co-op",
-      "updated": "2026-06-17"
-    },
-    {
       "id": "voidigo",
       "name": "Voidigo",
       "author": "splitux",
@@ -180,33 +216,6 @@
       "backend": "goldberg",
       "description": "Roguelite shooter — couch co-op",
       "updated": "2026-06-17"
-    },
-    {
-      "id": "lumencraft",
-      "name": "Lumencraft",
-      "author": "splitux",
-      "steam_appid": 1713810,
-      "backend": "goldberg",
-      "description": "Mining tower-defense — couch co-op",
-      "updated": "2026-06-18"
-    },
-    {
-      "id": "lovers-in-a-dangerous-spacetime",
-      "name": "Lovers in a Dangerous Spacetime",
-      "author": "splitux",
-      "steam_appid": 252110,
-      "backend": "goldberg",
-      "description": "Spaceship action — couch co-op",
-      "updated": "2026-06-18"
-    },
-    {
-      "id": "chronicon",
-      "name": "Chronicon",
-      "author": "splitux",
-      "steam_appid": 375480,
-      "backend": "goldberg",
-      "description": "Action RPG — couch co-op",
-      "updated": "2026-06-18"
     }
   ]
 }
