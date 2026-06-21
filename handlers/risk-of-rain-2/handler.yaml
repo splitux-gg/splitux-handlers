@@ -11,6 +11,9 @@ info: |
   Avoid: join from the lobby before the run starts; one instance per player.
 spec_ver: 3
 steam_appid: 632360
+# Save lives in Steam Cloud / Remote Storage (userdata/<id>/632360/remote), not the
+# Proton prefix — anchored via the goldberg-emulated remote storage.
+save_steam_cloud: true
 proton_path: "Proton - Experimental"
 pause_between_starts: 5.0
 
