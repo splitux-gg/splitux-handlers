@@ -1,0 +1,39 @@
+# Trine: Enchanted Edition - Splitux Handler
+# Native Linux (Frozenbyte, 32-bit) + goldberg (libsteam_api.so). Local-split
+# couch co-op (up to 3 heroes, shared screen) over splitux-together.
+#
+# RUNTIME: scout. Old native title (GNU/Linux 3.2.32, i386) built against the
+# Steam Linux Runtime (scout) — needs that runtime's legacy libs. splitux runs
+# it through scout, and the game's own trine1.sh launcher sets LD_LIBRARY_PATH
+# (lib/lib32) so both its bundled libs and goldberg's libsteam_api.so resolve.
+# (The binary has no rpath, so launch via the .sh, not the bare bin.)
+
+name: Trine Enchanted Edition
+# Boot the game binary directly (skip the Frozenbyte config-GUI launcher, which
+# needs a mouse click gamepad seats can't give). working_dir puts cwd at
+# _enchanted_edition_ (the game's data root) even though the binary is in bin/;
+# env sets the LD_LIBRARY_PATH the launcher would normally provide (so the game's
+# libs + goldberg's libsteam_api.so resolve).
+exec: _enchanted_edition_/bin/trine1_linux_32bit
+working_dir: _enchanted_edition_
+env: "LD_LIBRARY_PATH=lib/lib32"
+runtime: scout
+author: splitux
+version: "1.0"
+info: |
+  Trine: Enchanted Edition — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad).
+  Avoid: there's no online multiplayer menu — everyone shares one screen and save.
+spec_ver: 3
+steam_appid: 35700
+
+# Frozenbyte save dir (~ path used as-is).
+original_save_path: "~/.frozenbyte/Trine1"
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
