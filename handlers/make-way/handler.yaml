@@ -1,0 +1,43 @@
+# Make Way - Splitux Handler
+# Unity (IL2CPP) + goldberg + EOS (PlayEveryWare plugin). LOCAL couch co-op only
+# (drop-in 2nd controller, no online). Integrated as local-split via
+# splitux-together: ONE instance, 2 remote seats funneled in.
+#
+# NOTE: requires the eos_sdk_emu build with the CustomInvites fix — the stock
+# emu returned NULL from EOS_Platform_GetCustomInvitesInterface, which made the
+# game NRE in RegisterInviteNotifications and hang on the loading screen.
+# Fixed emu deployed to ~/.local/share/splitux/eos/win64/.
+
+name: Make Way
+exec: "Make Way.exe"
+author: splitux
+version: "1.0"
+info: |
+  Make Way — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad).
+  Avoid: there's no online multiplayer menu — everyone shares a single screen and save.
+spec_ver: 3
+steam_appid: 1445790
+
+# Save location (auto-resolved via appid for Proton; ~ paths used as-is).
+original_save_path: "AppData/LocalLow/Ice BEAM/Make Way"
+save_steam_id_remap: true
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# EOS/CEF subprocesses spawn on boot; give them time to settle.
+pause_between_starts: 15.0
+
+# goldberg satisfies the Steam API offline; no networking for local couch co-op.
+goldberg:
+  disable_networking: true
+
+# eos_sdk_emu satisfies the Epic-account/EOS init so the game boots offline.
+# Local-split needs no online sessions; online networking off.
+eos:
+  appid: "1445790"
+  disable_online_networking: true
