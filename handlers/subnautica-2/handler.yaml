@@ -1,0 +1,46 @@
+# Subnautica 2 - Splitux Handler
+# UE5 + goldberg + EOS. ONLINE co-op over EOS (Sessions + P2P + Presence), the
+# same emulatable model as Satisfactory / V Rising. Co-op verified carrying over
+# the eos_sdk_emu on the dual-instance bench (lobby discovered + P2P data both
+# ways) 2026-06-22; see memory subnautica2-eos-works.
+#
+# STATUS: bench-validated; splitux-together run not yet confirmed.
+
+name: Subnautica 2
+# Project shipping exe (self-inits its UE project + EOS; validated launching it
+# directly on the bench). Not the root Subnautica2.exe bootstrap.
+exec: Subnautica2-Win64-Shipping.exe
+author: splitux
+version: "1.0"
+info: |
+  Subnautica 2 — online co-op via splitux.
+  Play: the host creates/loads a co-op game and makes it joinable; the others join from the friends/session menu.
+  Avoid: the first join can sit on a loading screen while the world streams — give it time.
+spec_ver: 3
+steam_appid: 1962700
+
+# Save location (auto-resolved via appid for Proton).
+original_save_path: "AppData/Local/Subnautica2/Saved/SaveGames"
+save_steam_id_remap: true
+proton_path: "Proton - Experimental"
+
+# UE5 + EOS/CEF subprocesses + first-launch shader compile; give instance 0 time
+# to settle before instance 1 starts.
+pause_between_starts: 15.0
+
+# splitux EOS emu (eos_sdk_emu) native EOSLAN_* config. LOCALHOST_MODE = loopback
+# LAN discovery for two instances on one box; EOSLAN_USERNAME is injected
+# per-instance by the eos backend for deterministic identity.
+env: "EOSLAN_LOCALHOST_MODE=1 EOSLAN_DEBUG=1"
+
+# EOS emulator: provides the Sessions + Presence + P2P that Subnautica 2's co-op
+# rides on. (appid is informational; identity derives from the per-instance user.)
+eos:
+  appid: "1962700"
+  enable_lan: true
+  disable_online_networking: true
+
+# Goldberg: boot shim for the Steam ownership check at startup; co-op itself runs
+# over EOS, not Steam.
+goldberg:
+  disable_networking: false
