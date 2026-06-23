@@ -1,0 +1,34 @@
+# Overcooked! All You Can Eat - Splitux Handler
+# Unity (Windows) under Proton + goldberg. Local-split couch co-op over
+# splitux-together: ONE instance, N seats funnel in, all pads drive the one
+# shared screen. Team17 — same couch model as Overcooked! 2 / Moving Out, but the
+# remaster is Windows-only here so it runs under Proton.
+
+name: Overcooked! All You Can Eat
+exec: "Overcooked All You Can Eat.exe"
+author: splitux
+version: "0.1"
+info: |
+  Overcooked! All You Can Eat — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad).
+  Avoid: everyone shares a single screen and save; no online menu here.
+spec_ver: 3
+steam_appid: 1243830
+
+# Windows build under Proton.
+proton_path: "Proton - Experimental"
+pause_between_starts: 10.0
+
+# Proton save lives in the wine prefix: AppData/LocalLow/<company>/<product>
+# (best-guess product folder; refine after first POC).
+original_save_path: "AppData/LocalLow/Team17 Digital Limited/Overcooked! All You Can Eat"
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
+
+# boot-smoked 2026-06-23 under Proton-Experimental: prefix created, window maps, gamescope renders. (splitux prefix version-churn warning is benign reuse.) Couch co-op pending live POC.
