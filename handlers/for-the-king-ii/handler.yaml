@@ -1,0 +1,31 @@
+# For The King II - Splitux Handler
+# Windows under Proton + goldberg. ONLINE co-op (Steam lobbies) — one instance
+# per player, host opens a lobby/room, others join. boot-smoke only; online
+# co-op carrying over goldberg is UNVERIFIED (live POC).
+
+name: For The King II
+exec: "For The King II.exe"
+author: splitux
+version: "0.1"
+info: |
+  For The King II — online co-op via splitux.
+  Play: one player hosts a lobby/room, the others join it from the in-game multiplayer menu.
+  Avoid: one instance per player; join from the lobby before starting.
+spec_ver: 3
+steam_appid: 1676840
+
+# Windows build under Proton.
+proton_path: "Proton - Experimental"
+pause_between_starts: 10.0
+
+# Proton save in the wine prefix (best-guess; refine after POC).
+original_save_path: "AppData/LocalLow/IronOak Games/For The King II"
+
+# Online co-op: goldberg networking ON + public/joinable lobby.
+goldberg:
+  disable_networking: false
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
+
+# boot-smoked 2026-06-23 under Proton-Experimental: window maps, goldberg hooked. Online co-op pending live POC.
