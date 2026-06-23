@@ -1,0 +1,33 @@
+# Barony - Splitux Handler
+# NATIVE Linux (barony.x86_64) + goldberg. ONLINE co-op (Steam lobbies / LAN) —
+# Barony has NO local splitscreen, so this is the online-instance model: one
+# instance per player, host opens a lobby, others join from it.
+#
+# STATUS: boot-smoked only; online co-op carrying over goldberg lobbies is
+# UNVERIFIED — needs a live 2-instance POC.
+
+name: Barony
+exec: "barony.x86_64"
+author: splitux
+version: "0.1"
+info: |
+  Barony — online co-op via splitux.
+  Play: one player hosts a lobby, the others join it from the in-game multiplayer list.
+  Avoid: one instance per player; no local splitscreen.
+spec_ver: 3
+steam_appid: 371970
+
+# Native config dir (best-guess; refine after POC).
+original_save_path: "~/.config/barony"
+
+# Online co-op: goldberg networking ON + public/joinable lobby so instances see
+# each other for the lobby-join path.
+goldberg:
+  disable_networking: false
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
+
+# boot-smoked 2026-06-23 PASS: boots to main menu (~45s asset load), window maps,
+# goldberg hooked (31 ifaces). REQUIRES system libs: libcurl-gnutls sdl2_net
+# sdl2_ttf (pacman). Online co-op (lobby join) pending live POC.
