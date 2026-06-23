@@ -1,0 +1,35 @@
+# Overcooked! 2 - Splitux Handler
+# Unity + goldberg, NATIVE Linux build (Overcooked2.x86_64). Local-split couch
+# co-op over splitux-together: ONE instance, N remote seats funnel in, all pads
+# drive the one shared screen. Team17 — same publisher/engine as the validated
+# Moving Out handler, run native like Brotato.
+
+name: Overcooked! 2
+exec: "Overcooked2.x86_64"
+author: splitux
+version: "1.0"
+info: |
+  Overcooked! 2 — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad).
+  Avoid: there's no online multiplayer menu here — everyone shares a single screen and save.
+spec_ver: 3
+steam_appid: 728880
+
+# Native Unity save (~ path used as-is): ~/.config/unity3d/<company>/<product>.
+# The save is steam-id-keyed (Overcooked2/<steamid>/), like Brotato — so remap
+# makes instance 0 report the REAL Steam id and read the existing save IN PLACE.
+# Launch WITHOUT --save-sync-back (the game owns the real save directly).
+original_save_path: "~/.config/unity3d/Team17/Overcooked2"
+save_steam_id_remap: true
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+
+# One instance, all pads drive it — nothing to isolate between instances.
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
+
+# boot-smoked 2026-06-23 via together: boots, save loads in place at real Steam id (steam_id_remap, no sync-back), seats register. Couch co-op pending live POC.
