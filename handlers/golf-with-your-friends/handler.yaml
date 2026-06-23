@@ -1,0 +1,31 @@
+# Golf With Your Friends - Splitux Handler
+# Unity + goldberg, NATIVE Linux (Golf With Your Friends.x86_64). ONLINE
+# multiplayer (no couch) — online-instance model: one instance per player, host
+# creates a room, others join by code/lobby.
+#
+# STATUS: boot-smoked only; online co-op carrying over goldberg is UNVERIFIED
+# (the game may use Facepunch.Steamworks rather than the classic Steam SDK —
+# refine the emu config after a live POC).
+
+name: Golf With Your Friends
+exec: "Golf With Your Friends.x86_64"
+author: splitux
+version: "0.1"
+info: |
+  Golf With Your Friends — online multiplayer via splitux.
+  Play: one player hosts a room, the others join from the multiplayer menu.
+  Avoid: one instance per player; no local splitscreen.
+spec_ver: 3
+steam_appid: 431240
+
+# Native Unity save (~ path used as-is).
+original_save_path: "~/.config/unity3d/Team17 Digital Ltd/Golf With Your Friends"
+
+# Online multiplayer: goldberg networking ON + public/joinable lobby.
+goldberg:
+  disable_networking: false
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
+
+# boot-smoked 2026-06-23 (1 seat): boots, window maps, goldberg native hooked (31 ifaces). Online co-op pending live POC.
