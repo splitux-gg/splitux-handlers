@@ -1,0 +1,40 @@
+# Monaco: What's Yours Is Mine - Splitux Handler
+# Windows build under Proton + goldberg (the NATIVE Linux build is broken on
+# modern RADV/Mesa — empty 'system_blend' shader; ProtonDB rates Monaco Gold/
+# Platinum under Proton). Local-split couch co-op over splitux-together: ONE
+# instance, up to 4 seats funnel in, all pads drive the one shared screen.
+
+name: Monaco
+exec: "MONACO.exe"
+author: splitux
+version: "1.0"
+info: |
+  Monaco: What's Yours Is Mine — couch co-op via splitux-together.
+  Play: launch it from splitux, then each remote player opens their invite link to join the one shared screen (local players can use a gamepad). Up to 4 thieves.
+  Avoid: there's no online menu here — everyone shares one screen and save.
+spec_ver: 3
+steam_appid: 113020
+
+# Windows build under Proton (forced via Steam compat; native Linux build broken).
+proton_path: "Proton 9.0 (Beta)"
+pause_between_starts: 10.0
+
+# Proton save in the wine prefix (best-guess; refine after POC).
+original_save_path: "Documents/Pocketwatch Games/Monaco"
+
+# Local-splitscreen: ONE game instance driven by N seats (couch co-op).
+coop_mode: local-split
+input_isolation: none
+
+# goldberg satisfies the Steam API; local couch co-op needs no networking.
+goldberg:
+  disable_networking: true
+
+# STATUS 2026-06-23: Windows build under Proton 9 (user forced via umu 9) — the
+# native Linux build's shader bug is gone, BUT MONACO.exe HANGS in splitux at
+# 0% CPU (STAT SNs, sleeping) BEFORE creating any window → splitux "No gamescope
+# windows found". Not the prefix (clean None->9.0-203 rebuild same result), not
+# d3d/gamescope (other Proton games map fine). Hangs at Steam/XNA init = likely a
+# goldberg emulation incompat (Monaco waits on a Steam callback goldberg doesn't
+# fire; the user's DIRECT umu run worked because it used real Steam). Needs deeper
+# goldberg/XNA debugging — held uncommitted. ProtonDB: Gold (Windows-under-Proton).

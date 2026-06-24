@@ -25,11 +25,32 @@ save_steam_id_remap: true
 # Local-splitscreen: ONE game instance driven by N seats (couch co-op).
 coop_mode: local-split
 
-# One instance, all pads drive it — nothing to isolate between instances.
+# OC2/Unity (InControl) is EVDEV pickup: it reads the gamepad's evdev node
+# directly, ignores SDL_JOYSTICK_DEVICE, and binds the FIRST enumerated pad.
+# Two hard rules learned the hard way:
+#   * DO NOT use evdev isolation. Hiding devices via tmpfs /dev/input does NOT
+#     remove them from /sys, so Unity's udev scan still lists the hidden nodes,
+#     tries to open them, hits ENOENT, and never binds the seat pad — game opens
+#     0 input fds (confirmed this session: evdev isolation = boots but no input).
+#     Same fragility as Godot. So isolation must stay `none`.
+#   * Steam Input's decoy "Microsoft X-Box 360 pad 0" (Valve 28de:11ff) crashes
+#     Unity's GetJoystickNames at Awake (SIGABRT, "Primary child shut down") when
+#     present during a together launch — confirmed causally with a synthetic decoy
+#     (3/3 crash with it present, 6/6 boot without). It also steals controller
+#     slot 0 locally. Steam Input MUST be off (the local fix; disabling it made
+#     OC2 work instantly). With it off and no host Sunshine pad streaming, the
+#     seat pad is the only pad present, so Unity binds it.
 input_isolation: none
 
 # goldberg satisfies the Steam API; local couch co-op needs no networking.
 goldberg:
   disable_networking: true
 
-# boot-smoked 2026-06-23 via together: boots, save loads in place at real Steam id (steam_id_remap, no sync-back), seats register. Couch co-op pending live POC.
+# STATUS: COMPLETE — WORKING under splitux-together (verified 2026-06-24). The
+# long-standing crash (Unity/InControl NULL-derefs on any VIRTUAL seat pad) is
+# solved by giving the seat a REAL USB pad: seat-streamer's raw-gadget backend
+# (xpad360 over /dev/raw-gadget on a dummy_hcd UDC) makes the kernel xpad driver
+# create a genuine "Microsoft X-Box 360 pad" the game accepts. Verified live:
+# OC2 boots (no GetJoystickNames SIGABRT), title -> menu via the remote pad's A
+# press, full gameplay. Needs SEAT_PAD raw-gadget (enable-file or SEAT_PAD_UDC)
+# + dummy_hcd/raw_gadget loaded. Steam Input still must be OFF (decoy crash).

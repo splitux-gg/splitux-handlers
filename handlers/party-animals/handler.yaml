@@ -1,0 +1,31 @@
+# Party Animals - Splitux Handler
+# Windows under Proton + goldberg. ONLINE co-op (Steam lobbies) — one instance
+# per player, host opens a lobby/room, others join. boot-smoke only; online
+# co-op carrying over goldberg is UNVERIFIED (live POC).
+
+name: Party Animals
+exec: "PartyAnimals.exe"
+author: splitux
+version: "0.1"
+info: |
+  Party Animals — online co-op via splitux.
+  Play: one player hosts a lobby/room, the others join it from the in-game multiplayer menu.
+  Avoid: one instance per player; join from the lobby before starting.
+spec_ver: 3
+steam_appid: 1260320
+
+# Windows build under Proton.
+proton_path: "Proton - Experimental"
+pause_between_starts: 10.0
+
+# Proton save in the wine prefix (best-guess; refine after POC).
+original_save_path: "AppData/LocalLow/Recreate Games/Party Animals"
+
+# Online co-op: goldberg networking ON + public/joinable lobby.
+goldberg:
+  disable_networking: false
+  settings:
+    force_lobby_type.txt: "2"
+    invite_all.txt: ""
+
+# boot-smoke 2026-06-23 FAILED: PartyAnimals.exe launches + goldberg hooks (31 ifaces) but no window — EasyAntiCheat + online-required; goldberg-offline does not satisfy it. Hard case (anticheat); held uncommitted.
